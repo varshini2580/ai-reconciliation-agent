@@ -12,7 +12,17 @@
 
 ## 🚀 Live Demo
 
-**Coming soon — Streamlit deployment**
+👉 **[Open the Live Dashboard](https://ai-reconciliation-agent1.streamlit.app/)**
+
+The deployed dashboard allows you to:
+- Explore reconciliation KPIs
+- Investigate individual transactions
+- View AI-generated explanations
+- Inspect ML supporting signals
+- Trace agent decisions
+- View escalations
+- Inspect human-review status
+- Explore the audit trail
 
 ## 📂 Repository
 
