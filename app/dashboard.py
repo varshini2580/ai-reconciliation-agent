@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from pathlib import Path
+from textwrap import dedent
 
 
 # ============================================================
@@ -8,12 +9,11 @@ from pathlib import Path
 # ============================================================
 
 st.set_page_config(
-    page_title="AI Reconciliation Agent",
-    page_icon="🤖",
+    page_title="RazorRecon AI",
+    page_icon="💳",
     layout="wide",
     initial_sidebar_state="expanded",
 )
-
 
 # ============================================================
 # PATHS
@@ -209,28 +209,22 @@ def render_dataframe(dataframe):
 
 
 def render_count_table(title, counts):
+    """Render lightweight native Streamlit bar visualization."""
     if counts.empty:
         st.info(f"No {title.lower()} data available.")
         return
 
     st.subheader(title.title())
 
-    max_count = max(counts.max(), 1)
+    counts = counts.copy().sort_values(ascending=True)
+    max_count = max(float(counts.max()), 1.0)
 
     for category, count in counts.items():
-        col1, col2, col3 = st.columns([2, 6, 1])
+        value = float(count)
+        st.markdown(f"**{category}** — {int(value):,}")
+        st.progress(min(value / max_count, 1.0))
 
-        with col1:
-            st.write(str(category))
 
-        with col2:
-            progress = float(count) / float(max_count)
-            st.progress(progress)
-
-        with col3:
-            st.write(f"**{int(count):,}**")
-
-    # ============================================================
 # DASHBOARD METRICS
 # ============================================================
 
@@ -285,9 +279,12 @@ reconciliation_rate = (
 
 with st.sidebar:
 
-    st.title("🤖 AI Reconciliation")
-
-    st.markdown("### System Architecture")
+    st.title("💳 RazorRecon AI")
+    st.caption("AI Finance Controller")
+    st.caption(
+        "Reconcile • Investigate • Explain • Escalate • Review"
+    )
+    st.markdown("### Finance Control Architecture")
 
     st.markdown(
         """
@@ -330,13 +327,13 @@ with st.sidebar:
 # ============================================================
 
 st.markdown(
-    '<div class="main-title">🤖 AI Reconciliation Agent</div>',
+    '<div class="main-title"> 💳RazorRecon AI </div>',
     unsafe_allow_html=True,
 )
 
 st.markdown(
     '<div class="subtitle">'
-    "Intelligent Transaction Reconciliation & Exception Management"
+    "AI Finance Controller for Payment Reconciliation"
     "</div>",
     unsafe_allow_html=True,
 )
@@ -427,11 +424,18 @@ with k7:
     st.metric("⚠️ ML Disagreements", number(disagreements))
 
 with k8:
+    # Financial difference is derived directly from the reconciliation
+    # results; do not hard-code or manually add transaction amounts.
+    financial = 0.0
 
-   financial = 0.0
-
-if not reconciliation_results.empty and "difference" in reconciliation_results.columns:
-    financial = reconciliation_results["difference"].sum()
+    if (
+        not reconciliation_results.empty
+        and "difference" in reconciliation_results.columns
+    ):
+        financial = pd.to_numeric(
+            reconciliation_results["difference"],
+            errors="coerce",
+        ).fillna(0).sum()
 
     st.metric(
         "💰 Financial Difference",
@@ -512,40 +516,41 @@ with overview_tab:
     left, right = st.columns(2)
 
     with left:
-
-        st.subheader("Transaction Status")
-
         counts = get_counts(
             dashboard,
             status_col
         )
 
-        render_count_table("transaction status", counts)
+        render_count_table(
+            "transaction status",
+            counts
+        )
 
     with right:
-
-        st.subheader("Severity")
-
         counts = get_counts(
             dashboard,
             severity_col
         )
 
-        render_count_table("severity", counts)
+        render_count_table(
+            "severity",
+            counts
+        )
 
 
     # --------------------------------------------------------
     # EXCEPTION TYPES
     # --------------------------------------------------------
 
-    st.subheader("Exception Distribution")
-
     exception_counts = get_counts(
         dashboard,
         exception_col
     )
 
-    render_count_table("exception distribution", exception_counts)
+    render_count_table(
+        "exception distribution",
+        exception_counts
+    )
 
 
     # --------------------------------------------------------
@@ -582,6 +587,11 @@ with overview_tab:
 # ============================================================
 # TRANSACTION INVESTIGATION
 # ============================================================
+
+ai_text = None
+deterministic_text = None
+recommended_action = None
+explanation_source = None
 
 with transaction_tab:
 
@@ -622,6 +632,38 @@ with transaction_tab:
         if not selected.empty:
 
             row = selected.iloc[0]
+
+            ai_text = row.get("ai_explanation")
+            recommended_action = row.get("recommended_action")
+            explanation_source = row.get("explanation_source")
+
+            if pd.isna(ai_text):
+                ai_text = None
+            if pd.isna(recommended_action):
+                recommended_action = None
+            if pd.isna(explanation_source):
+                explanation_source = None
+
+            if not ai_text and not ai_explanations.empty:
+                explanation_id = find_column(
+                    ai_explanations,
+                    ["transaction_id"],
+                )
+                if explanation_id:
+                    explanation_row = ai_explanations[
+                        ai_explanations[explanation_id].astype(str)
+                        == selected_id
+                    ]
+                    if not explanation_row.empty:
+                        explanation = explanation_row.iloc[0]
+                        deterministic_text = explanation.get(
+                            "deterministic_explanation"
+                        )
+                        ai_text = explanation.get("ai_explanation")
+                        if pd.isna(deterministic_text):
+                            deterministic_text = None
+                        if pd.isna(ai_text):
+                            ai_text = None
 
             # ------------------------------------------------
             # HEADER
@@ -704,86 +746,66 @@ with transaction_tab:
 
 
             # ------------------------------------------------
-            # AI EXPLANATION
+            # AI EXPLANATION / AGENT INVESTIGATION REPORT
             # ------------------------------------------------
 
-            st.subheader("🧠 AI Explanation")
+            # First try the exception explanation record for this transaction.
+            ai_text = row.get("ai_explanation")
+            deterministic_text = row.get("deterministic_explanation")
+            recommended_action = row.get("recommended_action")
+            explanation_source = row.get("explanation_source")
 
-            explanation_found = False
-            ai_text = None
-            deterministic_text = None
-            recommended_action = None
-            explanation_source = None
+            def clean_value(value):
+                if value is None or pd.isna(value):
+                    return None
+                value = str(value).strip()
+                return value if value else None
 
-            # ========================================================
-            # FIRST: SEARCH exception_explanations.csv
-            # ========================================================
+            ai_text = clean_value(ai_text)
+            deterministic_text = clean_value(deterministic_text)
+            recommended_action = clean_value(recommended_action)
+            explanation_source = clean_value(explanation_source)
 
             if not explanations.empty:
-
-                exp_id = find_column(
-                    explanations,
-                    ["transaction_id"]
-                )
+                exp_id = find_column(explanations, ["transaction_id"])
 
                 if exp_id:
-
                     exp = explanations[
                         explanations[exp_id].astype(str).str.strip()
                         == str(selected_id).strip()
                     ]
 
                     if not exp.empty:
-
                         erow = exp.iloc[0]
+                        ai_text = clean_value(erow.get("ai_explanation")) or ai_text
+                        deterministic_text = (
+                            clean_value(erow.get("deterministic_explanation"))
+                            or deterministic_text
+                        )
+                        recommended_action = (
+                            clean_value(erow.get("recommended_action"))
+                            or recommended_action
+                        )
+                        explanation_source = (
+                            clean_value(erow.get("explanation_source"))
+                            or explanation_source
+                        )
 
-                        if "ai_explanation" in exp.columns:
-                            value = erow["ai_explanation"]
-
-                            if pd.notna(value) and str(value).strip():
-                                ai_text = str(value).strip()
-
-                        if "deterministic_explanation" in exp.columns:
-                            value = erow["deterministic_explanation"]
-
-                            if pd.notna(value) and str(value).strip():
-                                deterministic_text = str(value).strip()
-
-                        if "recommended_action" in exp.columns:
-                            value = erow["recommended_action"]
-
-                            if pd.notna(value) and str(value).strip():
-                                recommended_action = str(value).strip()
-
-                        if "explanation_source" in exp.columns:
-                            value = erow["explanation_source"]
-
-                            if pd.notna(value) and str(value).strip():
-                                explanation_source = str(value).strip()
-
-                        explanation_found = True
-
-            # ========================================================
-            # SECOND: SEARCH ai_explanations.csv
-            # ========================================================
-
+            # Second source: ai_explanations.csv.
             if not ai_text and not ai_explanations.empty:
-
-                ai_id = find_column(
+                explanation_id = find_column(
                     ai_explanations,
-                    ["transaction_id"]
+                    ["transaction_id"],
                 )
 
-                if ai_id:
-
-                    ai_row = ai_explanations[
-                        ai_explanations[ai_id].astype(str).str.strip()
+                if explanation_id:
+                    explanation_rows = ai_explanations[
+                        ai_explanations[explanation_id].astype(str).str.strip()
                         == str(selected_id).strip()
                     ]
 
-                    if not ai_row.empty:
-
-                        arow = ai_row.iloc[0]
+                    if not explanation_rows.empty:
+                        explanation = explanation_rows.iloc[0]
 
                         possible_ai_columns = [
                             "ai_explanation",
@@ -794,113 +816,195 @@ with transaction_tab:
                         ]
 
                         for column in possible_ai_columns:
-
-                            if column in ai_row.columns:
-
-                                value = arow[column]
-
-                                if pd.notna(value) and str(value).strip():
-
-                                    ai_text = str(value).strip()
-                                    explanation_source = "AI"
-                                    explanation_found = True
+                            if column in explanation_rows.columns:
+                                candidate = clean_value(explanation.get(column))
+                                if candidate:
+                                    ai_text = candidate
+                                    explanation_source = explanation_source or "AI"
                                     break
 
-            # ========================================================
-            # DISPLAY AI EXPLANATION
-            # ========================================================
+                        deterministic_text = (
+                            clean_value(explanation.get("deterministic_explanation"))
+                            or deterministic_text
+                        )
+                        recommended_action = (
+                            clean_value(explanation.get("recommended_action"))
+                            or recommended_action
+                        )
+
+            st.subheader("🤖 Agent Investigation Report")
 
             if ai_text:
-
-                st.info(ai_text)
-
-                st.caption(
-                    f"Explanation source: "
-                    f"{explanation_source or 'AI'}"
+                st.markdown(
+                    dedent(f"""
+                    <div style="padding:18px;border-radius:10px;
+                                background:#172554;border:1px solid #2563eb;
+                                margin-bottom:12px;">
+                        <div style="font-size:14px;font-weight:600;
+                                    margin-bottom:8px;">
+                            🧠 AI Assessment
+                        </div>
+                        <div style="font-size:15px;line-height:1.6;">
+                            {ai_text}
+                        </div>
+                    </div>
+                    """),
+                    unsafe_allow_html=True,
                 )
-
-            # ========================================================
-            # DISPLAY DETERMINISTIC EXPLANATION IF AI MISSING
-            # ========================================================
+                st.caption(f"Explanation source: {explanation_source or 'AI'}")
 
             elif deterministic_text:
-
-                st.info(
-                    deterministic_text
+                st.markdown(
+                    dedent(f"""
+                    <div style="padding:18px;border-radius:10px;
+                                background:#3f2a05;border:1px solid #f59e0b;
+                                margin-bottom:12px;">
+                        <div style="font-size:14px;font-weight:600;
+                                    margin-bottom:8px;">
+                            📋 Deterministic Investigation
+                        </div>
+                        <div style="font-size:15px;line-height:1.6;">
+                            {deterministic_text}
+                        </div>
+                    </div>
+                    """),
+                    unsafe_allow_html=True,
                 )
-
                 st.caption(
-                    "AI explanation unavailable; "
-                    "showing deterministic explanation."
+                    "AI explanation unavailable; showing deterministic explanation."
                 )
-
-            # ========================================================
-            # NOTHING FOUND
-            # ========================================================
 
             else:
-
                 st.warning(
-                    "No explanation text was found for "
+                    "No investigation explanation was found for "
                     f"transaction {selected_id}."
                 )
 
-            # ========================================================
-            # RECOMMENDED ACTION
-            # ========================================================
-
             if recommended_action:
-
-                st.markdown("**Recommended Action**")
-
-                st.success(
-                    recommended_action
+                st.markdown(
+                    dedent(f"""
+                    <div style="padding:16px;border-radius:10px;
+                                background:#052e1b;border:1px solid #16a34a;
+                                margin-top:8px;">
+                        <div style="font-size:14px;font-weight:600;
+                                    margin-bottom:7px;">
+                            🎯 Recommended Next Step
+                        </div>
+                        <div style="font-size:15px;line-height:1.5;">
+                            {recommended_action}
+                        </div>
+                    </div>
+                    """),
+                    unsafe_allow_html=True,
                 )
 
             # ------------------------------------------------
-            # ML SIGNAL
+            # ML CONFIDENCE / SUPPORTING SIGNAL
             # ------------------------------------------------
 
             st.subheader("🤖 ML Supporting Signal")
 
-            ml_fields = [
-                "ml_predicted_exception",
-                "ml_predicted_exception_type",
-                "ml_exception_probability",
-                "ml_agrees_with_rule_status",
-                "ml_agrees_with_rule_exception_type",
-            ]
+            ml_row = pd.DataFrame()
 
-            ml_rows = []
+            if not ml_agent.empty:
+                ml_id = find_column(ml_agent, ["transaction_id"])
+                if ml_id:
+                    ml_row = ml_agent[
+                        ml_agent[ml_id].astype(str).str.strip()
+                        == str(selected_id).strip()
+                    ]
 
-            for field in ml_fields:
+            if ml_row.empty and not dashboard.empty:
+                dashboard_id = find_column(dashboard, ["transaction_id"])
+                if dashboard_id:
+                    dashboard_ml_row = dashboard[
+                        dashboard[dashboard_id].astype(str).str.strip()
+                        == str(selected_id).strip()
+                    ]
+                    if not dashboard_ml_row.empty:
+                        ml_columns = [
+                            column for column in [
+                                "ml_predicted_exception_type",
+                                "ml_exception_probability",
+                                "ml_agrees_with_rule_status",
+                                "ml_agrees_with_rule_exception_type",
+                            ]
+                            if column in dashboard_ml_row.columns
+                        ]
+                        if ml_columns:
+                            ml_row = dashboard_ml_row[
+                                [dashboard_id] + ml_columns
+                            ]
 
-                if field in selected.columns:
-
-                    value = row[field]
-
-                    if pd.notna(value):
-
-                        ml_rows.append(
-                            [field, value]
-                        )
-
-            if ml_rows:
-
-                render_dataframe(
-                    pd.DataFrame(
-                        ml_rows,
-                        columns=[
-                            "ML Field",
-                            "Value"
-                        ],
-                    )
+            if not ml_row.empty:
+                mrow = ml_row.iloc[0]
+                probability = clean_value(
+                    mrow.get("ml_exception_probability")
                 )
 
-            else:
+                if probability is not None:
+                    try:
+                        confidence = max(
+                            0.0,
+                            min(1.0, float(probability))
+                        )
+                        st.progress(confidence)
+                        st.caption(
+                            f"ML exception confidence: {confidence:.1%}"
+                        )
+                    except (TypeError, ValueError):
+                        pass
 
+                ml_display = [
+                    column for column in [
+                        "ml_predicted_exception_type",
+                        "ml_exception_probability",
+                        "ml_agrees_with_rule_status",
+                        "ml_agrees_with_rule_exception_type",
+                    ]
+                    if column in ml_row.columns
+                ]
+
+                if ml_display:
+                    render_dataframe(ml_row[ml_display])
+                else:
+                    st.info(
+                        "ML supporting signal fields are not "
+                        "available for this transaction."
+                    )
+            else:
                 st.info(
-                    "No ML fields available for this transaction."
+                    "No ML supporting signal is available "
+                    f"for transaction {selected_id}."
+                )
+
+            # ------------------------------------------------
+            # EXCEPTION
+            # ------------------------------------------------
+
+            st.subheader("🚨 Exception")
+
+            exception_display = []
+
+            for column in [
+                "exception_type",
+                "severity",
+                "difference",
+                "reason",
+            ]:
+                if column in row.index:
+                    value = row.get(column)
+                    if pd.notna(value):
+                        exception_display.append(
+                            {"Field": column, "Value": value}
+                        )
+
+            if exception_display:
+                render_dataframe(pd.DataFrame(exception_display))
+            else:
+                st.info(
+                    "No exception details are available "
+                    f"for transaction {selected_id}."
                 )
 
             # ------------------------------------------------
@@ -909,40 +1013,38 @@ with transaction_tab:
 
             st.subheader("🤖 Agent Decision")
 
-            agent_fields = [
-                "agent_decision",
-                "resolution_category",
-                "escalation_required",
-                "action_type",
-                "action_status",
-                "requires_human",
-                "execution_mode",
-            ]
+            agent_row = pd.DataFrame()
 
-            agent_rows = []
+            if not agent.empty:
+                agent_id = find_column(agent, ["transaction_id"])
+                if agent_id:
+                    agent_row = agent[
+                        agent[agent_id].astype(str).str.strip()
+                        == str(selected_id).strip()
+                    ]
 
-            for field in agent_fields:
+            if not agent_row.empty:
+                agent_columns = [
+                    column for column in [
+                        "agent_decision",
+                        "escalation_required",
+                        "action_type",
+                        "action_status",
+                        "requires_human",
+                        "execution_mode",
+                        "agent_decision_reason",
+                    ]
+                    if column in agent_row.columns
+                ]
 
-                if field in selected.columns:
-
-                    value = row[field]
-
-                    if pd.notna(value):
-
-                        agent_rows.append(
-                            [field, value]
-                        )
-
-            if agent_rows:
-
-                render_dataframe(
-                    pd.DataFrame(
-                        agent_rows,
-                        columns=[
-                            "Agent Field",
-                            "Value"
-                        ],
-                    )
+                if agent_columns:
+                    render_dataframe(agent_row[agent_columns])
+                else:
+                    st.info("Agent decision fields are not available.")
+            else:
+                st.info(
+                    "No agent decision is available "
+                    f"for transaction {selected_id}."
                 )
 
             # ------------------------------------------------
@@ -951,59 +1053,117 @@ with transaction_tab:
 
             st.subheader("🚨 Escalation")
 
-            if not escalations.empty:
+            escalation_row = pd.DataFrame()
 
-                esc_id = find_column(
+            if not escalations.empty:
+                escalation_id = find_column(
                     escalations,
                     ["transaction_id"]
                 )
-
-                if esc_id:
-
-                    esc = escalations[
-                        escalations[esc_id].astype(str).str.strip()
+                if escalation_id:
+                    escalation_row = escalations[
+                        escalations[escalation_id]
+                        .astype(str).str.strip()
                         == str(selected_id).strip()
                     ]
 
-                    if not esc.empty:
+            if not escalation_row.empty:
+                escalation_columns = [
+                    column for column in [
+                        "transaction_id",
+                        "exception_type",
+                        "severity",
+                        "difference",
+                        "priority",
+                        "resolution_category",
+                        "next_step",
+                        "escalation_required",
+                        "escalation_priority",
+                        "escalation_reason",
+                        "escalation_status",
+                        "review_owner",
+                        "escalation_mode",
+                    ]
+                    if column in escalation_row.columns
+                ]
 
-                        render_dataframe(esc)
-
-                    else:
-
-                        st.success(
-                            "No escalation case created."
-                        )
+                if escalation_columns:
+                    render_dataframe(
+                        escalation_row[escalation_columns]
+                    )
+                else:
+                    st.info("Escalation details are not available.")
+            else:
+                st.info(
+                    "No escalation case is available "
+                    f"for transaction {selected_id}."
+                )
 
             # ------------------------------------------------
-            # REVIEW STATUS
+            # HUMAN REVIEW
             # ------------------------------------------------
 
             st.subheader("👤 Human Review")
 
-            if not review.empty:
+            review_row = pd.DataFrame()
 
+            if not review.empty:
                 review_id = find_column(
                     review,
                     ["transaction_id"]
                 )
-
                 if review_id:
-
-                    review_case = review[
-                        review[review_id].astype(str).str.strip()
+                    review_row = review[
+                        review[review_id]
+                        .astype(str).str.strip()
                         == str(selected_id).strip()
                     ]
 
-                    if not review_case.empty:
+            if not review_row.empty:
+                review_columns = [
+                    column for column in [
+                        "review_case_id",
+                        "event_id",
+                        "audit_id",
+                        "transaction_id",
+                        "event_type",
+                        "event_actor",
+                        "event_source",
+                        "event_status",
+                        "exception_type",
+                        "severity",
+                        "difference",
+                        "hybrid_decision",
+                        "agent_decision",
+                        "action_type",
+                        "action_status",
+                        "execution_mode",
+                        "escalation_required",
+                        "escalation_priority",
+                        "escalation_status",
+                        "review_owner",
+                        "review_priority",
+                        "queue_status",
+                        "review_status",
+                        "requires_human_review",
+                        "review_mode",
+                    ]
+                    if column in review_row.columns
+                ]
 
-                        render_dataframe(review_case)
+                if review_columns:
+                    render_dataframe(review_row[review_columns])
+                else:
+                    st.info(
+                        "Human review details are not available."
+                    )
+            else:
+                st.info(
+                    "No human review case is available "
+                    f"for transaction {selected_id}."
+                )
 
-                    else:
 
-                        st.info(
-                            "No review case found."
-                        )
 # ============================================================
 # AI / ML TAB
 # ============================================================
@@ -1025,6 +1185,8 @@ with ml_tab:
 
         **Gemini AI** → natural-language explanation
 
+        **Agent** → controlled workflow decision
+
         ML is deliberately prevented from overriding deterministic
         reconciliation results.
         """
@@ -1032,50 +1194,31 @@ with ml_tab:
 
     st.divider()
 
-    # --------------------------------------------------------
-    # HYBRID
-    # --------------------------------------------------------
-
     st.subheader("Hybrid Decision Distribution")
 
     hybrid_counts = get_counts(
         hybrid,
-        find_column(
-            hybrid,
-            ["hybrid_decision"]
-        )
+        find_column(hybrid, ["hybrid_decision"])
     )
 
     render_count_table("hybrid distribution", hybrid_counts)
 
-
-    # --------------------------------------------------------
-    # ML / AGENT ANALYTICS
-    # --------------------------------------------------------
-
     st.subheader("ML / Agent Analytics")
 
     if not ml_agent.empty:
-
         render_dataframe(ml_agent)
-
-
-    # --------------------------------------------------------
-    # KEY ML NUMBERS
-    # --------------------------------------------------------
+    else:
+        st.info("No ML / agent analytics data available.")
 
     st.subheader("Model Performance")
 
     a, b, c, d = st.columns(4)
-
     a.metric("Binary Accuracy", "96.00%")
     b.metric("Binary Precision", "100.00%")
     c.metric("Binary Recall", "80.00%")
     d.metric("Binary F1", "88.89%")
 
-
     a, b, c, d = st.columns(4)
-
     a.metric("Multiclass Accuracy", "96.00%")
     b.metric("Weighted F1", "94.47%")
     c.metric("Macro F1", "78.97%")
@@ -1083,7 +1226,7 @@ with ml_tab:
 
 
 # ============================================================
-# AGENT TAB
+# AGENT WORKFLOW TAB
 # ============================================================
 
 with agent_tab:
@@ -1095,71 +1238,84 @@ with agent_tab:
 
     st.markdown(
         """
-        The agent converts exception information into a controlled
-        workflow. It does **not** directly modify financial records.
-        Actions are simulated and human review is required.
+        The agent converts reconciliation exceptions into a controlled
+        operational workflow.
+
+        **Exception → Decision → Action → Escalation → Human Review**
+
+        Financial records are not directly modified by the agent.
         """
     )
 
     st.divider()
 
-    # --------------------------------------------------------
-    # DECISIONS
-    # --------------------------------------------------------
-
     st.subheader("Agent Decision Distribution")
 
-    decision_counts = get_counts(
+    agent_decision_counts = get_counts(
         agent,
-        find_column(
-            agent,
-            ["agent_decision"]
-        )
+        find_column(agent, ["agent_decision"])
     )
 
-    render_count_table("agent distribution", decision_counts)
-
-
-    # --------------------------------------------------------
-    # ACTIONS
-    # --------------------------------------------------------
+    render_count_table("agent decisions", agent_decision_counts)
 
     st.subheader("Action Distribution")
 
     action_counts = get_counts(
         actions,
-        find_column(
-            actions,
-            ["action_type"]
-        )
+        find_column(actions, ["action_type"])
     )
 
-    render_count_table("action distribution", action_counts)
-
-
-    # --------------------------------------------------------
-    # ESCALATION
-    # --------------------------------------------------------
+    render_count_table("actions", action_counts)
 
     st.subheader("Escalation Cases")
 
     if not escalations.empty:
+        escalation_display_columns = [
+            column for column in [
+                "transaction_id",
+                "exception_type",
+                "severity",
+                "difference",
+                "priority",
+                "resolution_category",
+                "next_step",
+                "escalation_required",
+                "escalation_priority",
+                "escalation_reason",
+                "escalation_status",
+                "review_owner",
+                "escalation_mode",
+            ]
+            if column in escalations.columns
+        ]
 
-        priority_col = find_column(
-            escalations,
-            ["escalation_priority"]
-        )
-
-        if priority_col:
-
-            priority_counts = get_counts(
-                escalations,
-                priority_col
+        if escalation_display_columns:
+            render_dataframe(
+                escalations[escalation_display_columns]
             )
+        else:
+            render_dataframe(escalations)
+    else:
+        st.info("No escalation cases available.")
 
-            render_count_table("escalation priority", priority_counts)
+    st.subheader("Escalation Priority")
 
-        render_dataframe(escalations)
+    escalation_priority_col = find_column(
+        escalations,
+        ["escalation_priority", "priority"]
+    )
+
+    if escalation_priority_col and not escalations.empty:
+        priority_counts = get_counts(
+            escalations,
+            escalation_priority_col
+        )
+        render_count_table(
+            "escalation priority",
+            priority_counts
+        )
+    else:
+        st.info("No escalation priority data available.")
 
 
 # ============================================================
