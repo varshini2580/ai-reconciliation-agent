@@ -149,7 +149,7 @@ dashboard = load_csv("dashboard_data.csv")
 kpis = load_csv("dashboard_kpis.csv")
 exception_analytics = load_csv("exception_analytics.csv")
 ml_agent = load_csv("ml_agent_analytics.csv")
-
+reconciliation_results = load_csv("reconciliation_results.csv")
 hybrid = load_csv("hybrid_decisions.csv")
 agent = load_csv("agent_decisions.csv")
 actions = load_csv("agent_actions.csv")
@@ -213,13 +213,25 @@ def render_count_table(title, counts):
         st.info(f"No {title.lower()} data available.")
         return
 
-    table = counts.rename("Count").reset_index()
-    table.columns = ["Category", "Count"]
-    render_dataframe(table)
+    st.subheader(title.title())
 
+    max_count = max(counts.max(), 1)
 
-# ============================================================
-# MAIN COLUMNS
+    for category, count in counts.items():
+        col1, col2, col3 = st.columns([2, 6, 1])
+
+        with col1:
+            st.write(str(category))
+
+        with col2:
+            progress = float(count) / float(max_count)
+            st.progress(progress)
+
+        with col3:
+            st.write(f"**{int(count):,}**")
+
+    # ============================================================
+# DASHBOARD METRICS
 # ============================================================
 
 status_col = find_column(dashboard, ["status"])
@@ -227,7 +239,6 @@ exception_col = find_column(dashboard, ["exception_type"])
 severity_col = find_column(dashboard, ["severity"])
 hybrid_col = find_column(dashboard, ["hybrid_decision"])
 agent_col = find_column(dashboard, ["agent_decision"])
-
 
 total = len(dashboard)
 
@@ -267,7 +278,6 @@ reconciliation_rate = (
     if total > 0
     else 0
 )
-
 
 # ============================================================
 # SIDEBAR
@@ -418,10 +428,10 @@ with k7:
 
 with k8:
 
-    financial = 0
+   financial = 0.0
 
-    if "total_difference" in exception_analytics.columns:
-        financial = exception_analytics["total_difference"].sum()
+if not reconciliation_results.empty and "difference" in reconciliation_results.columns:
+    financial = reconciliation_results["difference"].sum()
 
     st.metric(
         "💰 Financial Difference",
