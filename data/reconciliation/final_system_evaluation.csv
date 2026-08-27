@@ -1,0 +1,56 @@
+area,metric,status,actual_value,expected_value,notes
+DATA_RECONCILIATION,Transaction count,PASS,1000,1000,"Dataset contains the expected 1,000 transactions."
+DATA_RECONCILIATION,Matched transactions,PASS,800,800,Deterministic reconciliation matched 800 transactions.
+DATA_RECONCILIATION,Exception transactions,PASS,200,200,200 transactions entered the exception workflow.
+DATA_RECONCILIATION,Reconciliation rate,PASS,80.0,80.0,80% of transactions were automatically matched.
+AI_EXPLANATION,AI explanation records,PASS,200,200,Every exception has an explanation record.
+AI_EXPLANATION,Missing AI explanations,PASS,0,0,No exception explanation is missing.
+ML,ML dataset records,PASS,1000,1000,All transactions are represented in the ML dataset.
+ML,Binary test records,PASS,200,200,Binary model evaluation contains 200 test records.
+ML,Multiclass test records,PASS,200,200,Multiclass model evaluation contains 200 test records.
+ML,Feature importance records,PASS,53,53,Feature importance artifact was generated.
+ML,Binary accuracy,PASS,0.96,0.96,Binary Random Forest accuracy.
+ML,Binary precision,PASS,1.0,1.0,Binary Random Forest precision.
+ML,Binary recall,PASS,0.8,0.8,Binary Random Forest recall.
+ML,Binary F1,PASS,0.8889,0.8889,Binary Random Forest F1 score.
+ML,Multiclass accuracy,PASS,0.96,0.96,Multiclass Random Forest accuracy.
+ML,Multiclass macro F1,PASS,0.7897,0.7897,Macro F1 across exception classes.
+ML,Multiclass weighted F1,PASS,0.9447,0.9447,Weighted F1 across exception classes.
+HYBRID,RULE_MATCHED,PASS,800,800,Hybrid distribution preserves deterministic rule results.
+HYBRID,RULE_CONFIRMED_BY_ML,PASS,120,120,Hybrid distribution preserves deterministic rule results.
+HYBRID,RULE_EXCEPTION_ML_SUPPORT,PASS,71,71,Hybrid distribution preserves deterministic rule results.
+HYBRID,RULE_EXCEPTION_ML_DISAGREEMENT,PASS,9,9,Hybrid distribution preserves deterministic rule results.
+HYBRID,Deterministic rule authority,PASS,800,800,ML does not replace deterministic reconciliation results.
+AGENT,ESCALATE_FOR_REVIEW,PASS,170,170,Agent decision distribution is preserved.
+AGENT,DATE_REVIEW,PASS,10,10,Agent decision distribution is preserved.
+AGENT,FEE_REVIEW,PASS,10,10,Agent decision distribution is preserved.
+AGENT,SETTLEMENT_REVIEW,PASS,10,10,Agent decision distribution is preserved.
+AGENT,Agent actions,PASS,200,200,One action record exists for every exception.
+AGENT,Execution mode,PASS,SIMULATED,SIMULATED,Agent actions remain simulated and do not execute real external actions.
+AGENT,Escalation cases,PASS,170,170,170 exception cases are escalated for human review.
+AUDIT_REVIEW,Audit records,PASS,200,200,Audit and review artifacts preserve all exception cases.
+AUDIT_REVIEW,Audit events,PASS,200,200,Audit and review artifacts preserve all exception cases.
+AUDIT_REVIEW,Review cases,PASS,200,200,Audit and review artifacts preserve all exception cases.
+AUDIT_REVIEW,Review status,PASS,PENDING,PENDING,No fabricated reviewer activity exists.
+AUDIT_REVIEW,Audit event status,PASS,OPEN,OPEN,Audit events remain open until human review.
+DASHBOARD,Dashboard records,PASS,1000,1000,Dashboard preserves validated upstream results.
+DASHBOARD,Dashboard matched,PASS,800,800,Dashboard preserves validated upstream results.
+DASHBOARD,Dashboard exceptions,PASS,200,200,Dashboard preserves validated upstream results.
+DASHBOARD,Dashboard escalations,PASS,170,170,Dashboard preserves validated upstream results.
+DASHBOARD,Dashboard ML disagreements,PASS,9,9,Dashboard preserves validated upstream results.
+BUSINESS_IMPACT,Automated matching rate,PASS,80.0,80.0,Business impact metric validated against Phase 8.3 output.
+BUSINESS_IMPACT,Exception rate,PASS,20.0,20.0,Business impact metric validated against Phase 8.3 output.
+BUSINESS_IMPACT,Escalation rate,PASS,17.0,17.0,Business impact metric validated against Phase 8.3 output.
+BUSINESS_IMPACT,Financial impact,PASS,273292.01,273292.01,Business impact metric validated against Phase 8.3 output.
+END_TO_END_FLOW,Reconciliation → ML,PASS,PRESERVED,PRESERVED,Transaction identity is preserved across the pipeline.
+END_TO_END_FLOW,Reconciliation → Hybrid,PASS,PRESERVED,PRESERVED,Transaction identity is preserved across the pipeline.
+END_TO_END_FLOW,Reconciliation → Dashboard,PASS,PRESERVED,PRESERVED,Transaction identity is preserved across the pipeline.
+END_TO_END_FLOW,Exceptions → AI explanations,PASS,PRESERVED,PRESERVED,Transaction identity is preserved across the pipeline.
+END_TO_END_FLOW,Exceptions → Agent decisions,PASS,PRESERVED,PRESERVED,Transaction identity is preserved across the pipeline.
+END_TO_END_FLOW,Exceptions → Audit,PASS,PRESERVED,PRESERVED,Transaction identity is preserved across the pipeline.
+END_TO_END_FLOW,Exceptions → Review,PASS,PRESERVED,PRESERVED,Transaction identity is preserved across the pipeline.
+LIMITATIONS,Real external execution,LIMITATION,SIMULATED,REAL_EXECUTION,Agent actions and escalations are simulated.
+LIMITATIONS,Human review,PASS,REQUIRED,REQUIRED,Human-in-the-loop control is preserved.
+LIMITATIONS,ML minority-class performance,LIMITATION,MACRO_F1_0.7897,HIGHER,Macro F1 is lower because exception classes are imbalanced.
+LIMITATIONS,Historical dataset size,LIMITATION,1000_TRANSACTIONS,LARGER_PRODUCTION_DATASET,The evaluation dataset is suitable for demonstration but is not production-scale.
+LIMITATIONS,Production monitoring,LIMITATION,NOT_IMPLEMENTED,REQUIRED,Live model drift and operational monitoring are outside this prototype.

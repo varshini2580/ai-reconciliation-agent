@@ -1,0 +1,45 @@
+category,metric,value,unit,interpretation
+OPERATIONS,TOTAL_TRANSACTIONS,1000.0,transactions,Total transactions processed by the reconciliation pipeline.
+OPERATIONS,MATCHED_TRANSACTIONS,800.0,transactions,Transactions automatically reconciled without exception.
+OPERATIONS,EXCEPTION_TRANSACTIONS,200.0,transactions,Transactions requiring exception handling.
+EFFICIENCY,RECONCILIATION_RATE,80.0,percent,Share of transactions successfully matched.
+WORKLOAD,EXCEPTION_RATE,20.0,percent,Share of transactions requiring exception handling.
+WORKLOAD,ESCALATION_RATE,17.0,percent,Share of all transactions escalated for human review.
+WORKLOAD,PENDING_REVIEW_RATE,20.0,percent,Share of transactions currently requiring review.
+AUTOMATION,EXCEPTIONS_NOT_ESCALATED,30.0,cases,Exception cases handled without escalation.
+AUTOMATION,EXCEPTION_NON_ESCALATION_RATE,15.0,percent,Share of exception cases not escalated.
+ML,ML_SUPPORTED_EXCEPTIONS,71.0,cases,Exception cases where ML supported the deterministic rule.
+ML,ML_CONFIRMED_RULE_MATCHES,120.0,cases,Rule-matched cases receiving ML confirmation.
+ML,ML_DISAGREEMENTS,9.0,cases,Cases where ML disagreed with the deterministic exception result.
+SEVERITY,HIGH_SEVERITY_EXCEPTIONS,110.0,cases,55.00% of all exceptions are HIGH severity.
+SEVERITY,MEDIUM_SEVERITY_EXCEPTIONS,70.0,cases,35.00% of all exceptions are MEDIUM severity.
+SEVERITY,LOW_SEVERITY_EXCEPTIONS,20.0,cases,10.00% of all exceptions are LOW severity.
+ESCALATION,URGENT_ESCALATIONS,110.0,cases,110 escalations require urgent priority handling.
+ESCALATION,HIGH_ESCALATIONS,60.0,cases,60 escalations require high priority handling.
+ESCALATION,TOTAL_ESCALATIONS,170.0,cases,Total exception cases escalated for human review.
+FINANCIAL,TOTAL_FINANCIAL_DIFFERENCE,269747.08999999997,INR,Financial variance derived from the validated exception dataset.
+FINANCIAL,TOTAL_ABSOLUTE_FINANCIAL_IMPACT,273292.01,INR,Financial variance derived from the validated exception dataset.
+FINANCIAL,AVERAGE_EXCEPTION_FINANCIAL_IMPACT,1366.4600500000001,INR,Financial variance derived from the validated exception dataset.
+FINANCIAL,MAXIMUM_EXCEPTION_FINANCIAL_IMPACT,9999.0,INR,Financial variance derived from the validated exception dataset.
+FINANCIAL,POSITIVE_FINANCIAL_VARIANCE,271519.55,INR,Financial variance derived from the validated exception dataset.
+EXCEPTION_CONCENTRATION,AMOUNT_MISMATCH_COUNT,30.0,cases,15.00% of all exceptions belong to AMOUNT_MISMATCH.
+EXCEPTION_CONCENTRATION,MISSING_SETTLEMENT_COUNT,20.0,cases,10.00% of all exceptions belong to MISSING_SETTLEMENT.
+EXCEPTION_CONCENTRATION,MISSING_PAYMENT_COUNT,20.0,cases,10.00% of all exceptions belong to MISSING_PAYMENT.
+EXCEPTION_CONCENTRATION,DUPLICATE_PAYMENT_COUNT,15.0,cases,7.50% of all exceptions belong to DUPLICATE_PAYMENT.
+EXCEPTION_CONCENTRATION,FAILED_PAYMENT_COUNT,15.0,cases,7.50% of all exceptions belong to FAILED_PAYMENT.
+EXCEPTION_CONCENTRATION,REFUND_COUNT,15.0,cases,7.50% of all exceptions belong to REFUND.
+EXCEPTION_CONCENTRATION,PARTIAL_SETTLEMENT_COUNT,15.0,cases,7.50% of all exceptions belong to PARTIAL_SETTLEMENT.
+EXCEPTION_CONCENTRATION,INCORRECT_FEE_COUNT,10.0,cases,5.00% of all exceptions belong to INCORRECT_FEE.
+EXCEPTION_CONCENTRATION,DATE_MISMATCH_COUNT,10.0,cases,5.00% of all exceptions belong to DATE_MISMATCH.
+EXCEPTION_CONCENTRATION,DUPLICATE_SETTLEMENT_COUNT,10.0,cases,5.00% of all exceptions belong to DUPLICATE_SETTLEMENT.
+EXCEPTION_CONCENTRATION,WRONG_TRANSACTION_REFERENCE_COUNT,10.0,cases,5.00% of all exceptions belong to WRONG_TRANSACTION_REFERENCE.
+EXCEPTION_CONCENTRATION,CHARGEBACK_COUNT,10.0,cases,5.00% of all exceptions belong to CHARGEBACK.
+EXCEPTION_CONCENTRATION,SETTLEMENT_DELAY_COUNT,10.0,cases,5.00% of all exceptions belong to SETTLEMENT_DELAY.
+EXCEPTION_CONCENTRATION,MULTIPLE_PAYMENTS_COUNT,5.0,cases,2.50% of all exceptions belong to MULTIPLE_PAYMENTS.
+EXCEPTION_CONCENTRATION,UNKNOWN_ADJUSTMENT_COUNT,5.0,cases,2.50% of all exceptions belong to UNKNOWN_ADJUSTMENT.
+EXCEPTION_CONCENTRATION,TOP_3_EXCEPTION_CONCENTRATION,35.0,percent,Percentage of exceptions represented by the three most frequent exception types.
+BUSINESS_VALUE,AUTOMATED_MATCHING_RATE,80.0,percent,Share of all transactions resolved through deterministic reconciliation.
+BUSINESS_VALUE,MANUAL_EXCEPTION_WORKLOAD,200.0,cases,Exception cases requiring downstream analysis rather than normal matching.
+BUSINESS_VALUE,HUMAN_ESCALATION_RATE,17.0,percent,Share of all transactions escalated for human review.
+BUSINESS_VALUE,RULE_ML_COMPLEMENTARITY,100.0,percent,ML operates as a supporting layer while deterministic rules remain authoritative.
+BUSINESS_VALUE,HUMAN_IN_THE_LOOP,100.0,percent,All generated agent actions require human review.

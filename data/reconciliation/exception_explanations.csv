@@ -1,0 +1,1001 @@
+transaction_id,status,exception_type,severity,explanation,evidence,difference,recommended_action
+TXN00001,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00002,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00002.,"Settlement records found: 0; payment total: ₹5,999.00.",5999.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00003,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00004,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00005,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00006,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00007,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00008,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00009,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00010,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00011,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00012,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00013,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00014,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00015,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00016,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00017,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00017.,Settlement records found: 0; payment total: ₹999.00.,999.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00018,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00019,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00019.,Settlement records found: 0; payment total: ₹299.00.,299.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00020,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00021,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00022,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00023,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00024,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00025,EXCEPTION,DUPLICATE_SETTLEMENT,MEDIUM,"Multiple settlement records were found for transaction TXN00025, including a duplicate settlement.",Settlement records: 2; total settlement amount: ₹986.22.,-11.78,Verify the duplicate settlement entries and investigate possible over-settlement.
+TXN00026,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00027,EXCEPTION,DATE_MISMATCH,LOW,The payment date differs from the clean reference payment date.,Actual payment date: 2026-06-03; reference payment date: 2026-05-24.,0.0,Verify the payment processing date against the source payment record.
+TXN00028,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00029,EXCEPTION,PARTIAL_SETTLEMENT,MEDIUM,The settlement amount is lower than the expected gross settlement amount.,Gross settlement: ₹499.00; actual net settlement: ₹399.20; difference: ₹99.80.,99.8,Verify whether the remaining amount is pending or was incorrectly settled.
+TXN00030,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00031,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00032,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00033,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00034,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,Expected settlement: ₹784.86; actual settlement: ₹284.86; difference: ₹500.00.,500.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00035,EXCEPTION,DUPLICATE_SETTLEMENT,MEDIUM,"Multiple settlement records were found for transaction TXN00035, including a duplicate settlement.","Settlement records: 2; total settlement amount: ₹15,714.84.",-283.16,Verify the duplicate settlement entries and investigate possible over-settlement.
+TXN00036,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00037,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00038,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00039,EXCEPTION,DUPLICATE_PAYMENT,MEDIUM,"Multiple payment records were found for transaction TXN00039, including a duplicate payment.",Payment records: 2; total payment amount: ₹598.00.,299.0,Verify the duplicate payment records and determine whether a reversal or refund is required.
+TXN00040,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00041,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00042,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00043,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00044,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00045,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00046,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00047,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00048,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00049,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00050,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,Expected settlement: ₹981.32; actual settlement: ₹0.00; difference: ₹981.32.,981.32,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00051,EXCEPTION,MULTIPLE_PAYMENTS,MEDIUM,Multiple payment records exist for transaction TXN00051.,"Payment records: 2; total payment amount: ₹10,398.70.",2399.7,Verify why multiple payments exist for the same transaction and confirm the correct payment record.
+TXN00052,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00053,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00054,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00054.,Payment records found: 0; order/payment amount available for reconciliation.,1999.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00055,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00056,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00057,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00057.,Payment records found: 0; order/payment amount available for reconciliation.,5999.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00058,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00059,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00060,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00061,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00062,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00063,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00064,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00065,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00066,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00067,EXCEPTION,REFUND,HIGH,A refund was recorded for transaction TXN00067.,Refund amount: ₹374.75.,374.75,Verify the refund authorization and confirm that the refund amount is correct.
+TXN00068,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00069,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00070,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00071,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00072,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00073,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00074,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00075,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00076,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00077,EXCEPTION,DUPLICATE_PAYMENT,MEDIUM,"Multiple payment records were found for transaction TXN00077, including a duplicate payment.",Payment records: 2; total payment amount: ₹598.00.,299.0,Verify the duplicate payment records and determine whether a reversal or refund is required.
+TXN00078,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00079,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00080,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00081,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00082,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00083,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00084,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00085,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00086,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,"Expected settlement: ₹9,822.02; actual settlement: ₹9,572.02; difference: ₹250.00.",250.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00087,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00088,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00089,EXCEPTION,WRONG_TRANSACTION_REFERENCE,MEDIUM,The bank reference does not match transaction TXN00089.,Bank reference: TXN00030.,0.0,Verify the bank reference and correct the transaction mapping if required.
+TXN00090,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00091,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00092,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00093,EXCEPTION,INCORRECT_FEE,MEDIUM,The settlement fee differs from the expected fee structure.,Gross amount: ₹999.00; fee charged: ₹69.93.,69.93,Compare the charged settlement fee with the expected fee structure.
+TXN00094,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00095,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00096,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00097,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00098,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00099,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00100,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00101,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00102,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00103,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00104,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00105,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00106,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00107,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00108,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00109,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00110,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00111,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00112,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00113,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00114,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00114.,Payment records found: 0; order/payment amount available for reconciliation.,999.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00115,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00116,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00117,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00118,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00119,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00120,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00121,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00122,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00123,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00124,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00125,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00126,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00127,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00128,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00129,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00130,EXCEPTION,WRONG_TRANSACTION_REFERENCE,MEDIUM,The bank reference does not match transaction TXN00130.,Bank reference: TXN00296.,0.0,Verify the bank reference and correct the transaction mapping if required.
+TXN00131,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00132,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00133,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00134,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00135,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00136,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00137,EXCEPTION,WRONG_TRANSACTION_REFERENCE,MEDIUM,The bank reference does not match transaction TXN00137.,Bank reference: TXN00125.,0.0,Verify the bank reference and correct the transaction mapping if required.
+TXN00138,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00139,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00140,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00141,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00142,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00143,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00144,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00145,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00146,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00147,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00148,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00149,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00150,EXCEPTION,PARTIAL_SETTLEMENT,MEDIUM,The settlement amount is lower than the expected gross settlement amount.,"Gross settlement: ₹9,999.00; actual net settlement: ₹7,999.20; difference: ₹1,999.80.",1999.8,Verify whether the remaining amount is pending or was incorrectly settled.
+TXN00151,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00151.,Payment records found: 0; order/payment amount available for reconciliation.,1499.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00152,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00153,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00154,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00155,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00156,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00157,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00158,EXCEPTION,INCORRECT_FEE,MEDIUM,The settlement fee differs from the expected fee structure.,"Gross amount: ₹1,499.00; fee charged: ₹149.90.",149.9,Compare the charged settlement fee with the expected fee structure.
+TXN00159,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00160,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00161,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00162,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00163,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00164,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00165,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00166,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00167,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00168,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00169,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00170,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00171,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00172,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00173,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00174,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00175,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00175.,Payment records found: 0; order/payment amount available for reconciliation.,2499.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00176,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00177,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00178,EXCEPTION,DUPLICATE_PAYMENT,MEDIUM,"Multiple payment records were found for transaction TXN00178, including a duplicate payment.","Payment records: 2; total payment amount: ₹5,998.00.",2999.0,Verify the duplicate payment records and determine whether a reversal or refund is required.
+TXN00179,EXCEPTION,DATE_MISMATCH,LOW,The payment date differs from the clean reference payment date.,Actual payment date: 2026-02-17; reference payment date: 2026-02-07.,0.0,Verify the payment processing date against the source payment record.
+TXN00180,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00181,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00182,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00183,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00184,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00185,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,Expected settlement: ₹194.30; actual settlement: ₹94.30; difference: ₹100.00.,100.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00186,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00186.,Payment records found: 0; order/payment amount available for reconciliation.,2499.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00187,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00188,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00189,EXCEPTION,REFUND,HIGH,A refund was recorded for transaction TXN00189.,Refund amount: ₹449.70.,449.7,Verify the refund authorization and confirm that the refund amount is correct.
+TXN00190,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00190.,"Settlement records found: 0; payment total: ₹1,999.00.",1999.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00191,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00192,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00193,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00194,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00195,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00196,EXCEPTION,SETTLEMENT_DELAY,LOW,The settlement date differs from the clean reference settlement date.,Actual settlement date: 2026-07-09; reference settlement date: 2026-06-29.,0.0,Check settlement processing status and investigate the settlement delay.
+TXN00197,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00198,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00199,EXCEPTION,PARTIAL_SETTLEMENT,MEDIUM,The settlement amount is lower than the expected gross settlement amount.,"Gross settlement: ₹2,499.00; actual net settlement: ₹1,249.50; difference: ₹1,249.50.",1249.5,Verify whether the remaining amount is pending or was incorrectly settled.
+TXN00200,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00201,EXCEPTION,DUPLICATE_PAYMENT,MEDIUM,"Multiple payment records were found for transaction TXN00201, including a duplicate payment.","Payment records: 2; total payment amount: ₹1,598.00.",799.0,Verify the duplicate payment records and determine whether a reversal or refund is required.
+TXN00202,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00203,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00203.,"Settlement records found: 0; payment total: ₹1,499.00.",1499.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00204,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00205,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00206,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00207,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00208,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00209,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00210,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00211,EXCEPTION,DUPLICATE_SETTLEMENT,MEDIUM,"Multiple settlement records were found for transaction TXN00211, including a duplicate settlement.","Settlement records: 2; total settlement amount: ₹5,913.06.",-84.94,Verify the duplicate settlement entries and investigate possible over-settlement.
+TXN00212,EXCEPTION,MULTIPLE_PAYMENTS,MEDIUM,Multiple payment records exist for transaction TXN00212.,"Payment records: 2; total payment amount: ₹12,998.70.",2999.7,Verify why multiple payments exist for the same transaction and confirm the correct payment record.
+TXN00213,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00214,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00215,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00216,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00217,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00218,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00219,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00220,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00221,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00222,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00222.,Settlement records found: 0; payment total: ₹799.00.,799.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00223,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00224,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00225,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00226,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00227,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00228,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00229,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00230,EXCEPTION,PARTIAL_SETTLEMENT,MEDIUM,The settlement amount is lower than the expected gross settlement amount.,"Gross settlement: ₹3,999.00; actual net settlement: ₹3,199.20; difference: ₹799.80.",799.8,Verify whether the remaining amount is pending or was incorrectly settled.
+TXN00231,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00232,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00233,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00234,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00235,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00236,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00237,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00238,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00239,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00240,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00241,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00242,EXCEPTION,PARTIAL_SETTLEMENT,MEDIUM,The settlement amount is lower than the expected gross settlement amount.,"Gross settlement: ₹1,999.00; actual net settlement: ₹999.50; difference: ₹999.50.",999.5,Verify whether the remaining amount is pending or was incorrectly settled.
+TXN00243,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00244,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00245,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00246,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00247,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00248,EXCEPTION,DUPLICATE_PAYMENT,MEDIUM,"Multiple payment records were found for transaction TXN00248, including a duplicate payment.","Payment records: 2; total payment amount: ₹7,998.00.",3999.0,Verify the duplicate payment records and determine whether a reversal or refund is required.
+TXN00249,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00250,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00251,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00252,EXCEPTION,UNKNOWN_ADJUSTMENT,MEDIUM,An unexpected settlement adjustment was recorded for transaction TXN00252.,Adjustment amount: ₹-500.00.,-500.0,Review the adjustment entry and identify its source.
+TXN00253,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00254,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00255,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00256,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00257,EXCEPTION,SETTLEMENT_DELAY,LOW,The settlement date differs from the clean reference settlement date.,Actual settlement date: 2026-02-14; reference settlement date: 2026-02-09.,0.0,Check settlement processing status and investigate the settlement delay.
+TXN00258,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00259,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00260,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00261,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00262,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00263,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00264,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00265,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00265.,Payment records found: 0; order/payment amount available for reconciliation.,4999.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00266,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00267,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00268,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00269,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00270,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00271,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00272,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00273,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00274,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00275,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00276,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00277,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00278,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00279,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00280,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00281,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00282,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00283,EXCEPTION,FAILED_PAYMENT,HIGH,The payment associated with transaction TXN00283 is marked as FAILED.,Payment total: ₹999.00; payment status: FAILED.,999.0,Verify the payment status and determine whether a retry or customer follow-up is required.
+TXN00284,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00285,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00286,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00287,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00288,EXCEPTION,FAILED_PAYMENT,HIGH,The payment associated with transaction TXN00288 is marked as FAILED.,Payment total: ₹299.00; payment status: FAILED.,299.0,Verify the payment status and determine whether a retry or customer follow-up is required.
+TXN00289,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00290,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00291,EXCEPTION,DUPLICATE_PAYMENT,MEDIUM,"Multiple payment records were found for transaction TXN00291, including a duplicate payment.","Payment records: 2; total payment amount: ₹1,598.00.",799.0,Verify the duplicate payment records and determine whether a reversal or refund is required.
+TXN00292,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00293,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00294,EXCEPTION,DUPLICATE_SETTLEMENT,MEDIUM,"Multiple settlement records were found for transaction TXN00294, including a duplicate settlement.","Settlement records: 2; total settlement amount: ₹1,974.42.",-23.58,Verify the duplicate settlement entries and investigate possible over-settlement.
+TXN00295,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00296,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00297,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00298,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00299,EXCEPTION,FAILED_PAYMENT,HIGH,The payment associated with transaction TXN00299 is marked as FAILED.,"Payment total: ₹3,999.00; payment status: FAILED.",3999.0,Verify the payment status and determine whether a retry or customer follow-up is required.
+TXN00300,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00300.,"Settlement records found: 0; payment total: ₹1,999.00.",1999.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00301,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00302,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00303,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00304,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00305,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00306,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00307,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00308,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00309,EXCEPTION,WRONG_TRANSACTION_REFERENCE,MEDIUM,The bank reference does not match transaction TXN00309.,Bank reference: TXN00498.,0.0,Verify the bank reference and correct the transaction mapping if required.
+TXN00310,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00311,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00312,EXCEPTION,CHARGEBACK,HIGH,A chargeback was recorded for transaction TXN00312.,"Chargeback amount: ₹2,999.25.",2999.25,Review the chargeback and associated dispute record.
+TXN00313,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00314,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00315,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00316,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00317,EXCEPTION,PARTIAL_SETTLEMENT,MEDIUM,The settlement amount is lower than the expected gross settlement amount.,Gross settlement: ₹799.00; actual net settlement: ₹639.20; difference: ₹159.80.,159.8,Verify whether the remaining amount is pending or was incorrectly settled.
+TXN00318,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00319,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00320,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00321,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00322,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00323,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00324,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00325,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00326,EXCEPTION,REFUND,HIGH,A refund was recorded for transaction TXN00326.,Refund amount: ₹599.90.,599.9,Verify the refund authorization and confirm that the refund amount is correct.
+TXN00327,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00328,EXCEPTION,WRONG_TRANSACTION_REFERENCE,MEDIUM,The bank reference does not match transaction TXN00328.,Bank reference: TXN00998.,0.0,Verify the bank reference and correct the transaction mapping if required.
+TXN00329,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00330,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00331,EXCEPTION,CHARGEBACK,HIGH,A chargeback was recorded for transaction TXN00331.,Chargeback amount: ₹249.50.,249.5,Review the chargeback and associated dispute record.
+TXN00332,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00333,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00334,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00335,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00335.,"Settlement records found: 0; payment total: ₹1,499.00.",1499.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00336,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00337,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,Expected settlement: ₹984.85; actual settlement: ₹734.85; difference: ₹250.00.,250.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00338,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00339,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00340,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00341,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00342,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00343,EXCEPTION,WRONG_TRANSACTION_REFERENCE,MEDIUM,The bank reference does not match transaction TXN00343.,Bank reference: TXN00717.,0.0,Verify the bank reference and correct the transaction mapping if required.
+TXN00344,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00345,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00346,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00347,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00348,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00349,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00350,EXCEPTION,DATE_MISMATCH,LOW,The payment date differs from the clean reference payment date.,Actual payment date: 2026-03-17; reference payment date: 2026-03-07.,0.0,Verify the payment processing date against the source payment record.
+TXN00351,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,"Expected settlement: ₹1,975.41; actual settlement: ₹1,875.41; difference: ₹100.00.",100.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00352,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00353,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00354,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00355,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,"Expected settlement: ₹5,928.21; actual settlement: ₹5,428.21; difference: ₹500.00.",500.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00356,EXCEPTION,REFUND,HIGH,A refund was recorded for transaction TXN00356.,"Refund amount: ₹1,199.70.",1199.7,Verify the refund authorization and confirm that the refund amount is correct.
+TXN00357,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00358,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00359,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00360,EXCEPTION,REFUND,HIGH,A refund was recorded for transaction TXN00360.,Refund amount: ₹449.70.,449.7,Verify the refund authorization and confirm that the refund amount is correct.
+TXN00361,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00362,EXCEPTION,INCORRECT_FEE,MEDIUM,The settlement fee differs from the expected fee structure.,Gross amount: ₹199.00; fee charged: ₹19.90.,19.9,Compare the charged settlement fee with the expected fee structure.
+TXN00363,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00364,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00365,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00365.,Settlement records found: 0; payment total: ₹199.00.,199.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00366,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,"Expected settlement: ₹2,945.92; actual settlement: ₹2,445.92; difference: ₹500.00.",500.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00367,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00368,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00369,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00370,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00370.,Payment records found: 0; order/payment amount available for reconciliation.,499.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00371,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00372,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00373,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00374,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00375,EXCEPTION,PARTIAL_SETTLEMENT,MEDIUM,The settlement amount is lower than the expected gross settlement amount.,"Gross settlement: ₹2,499.00; actual net settlement: ₹1,749.30; difference: ₹749.70.",749.7,Verify whether the remaining amount is pending or was incorrectly settled.
+TXN00376,EXCEPTION,DATE_MISMATCH,LOW,The payment date differs from the clean reference payment date.,Actual payment date: 2026-05-04; reference payment date: 2026-04-24.,0.0,Verify the payment processing date against the source payment record.
+TXN00377,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00378,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00379,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00380,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00381,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00382,EXCEPTION,MULTIPLE_PAYMENTS,MEDIUM,Multiple payment records exist for transaction TXN00382.,"Payment records: 2; total payment amount: ₹1,948.70.",449.7,Verify why multiple payments exist for the same transaction and confirm the correct payment record.
+TXN00383,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00384,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00385,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00386,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00387,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00387.,"Settlement records found: 0; payment total: ₹5,999.00.",5999.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00388,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00389,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00390,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00391,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00392,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00393,EXCEPTION,INCORRECT_FEE,MEDIUM,The settlement fee differs from the expected fee structure.,"Gross amount: ₹3,999.00; fee charged: ₹279.93.",279.93,Compare the charged settlement fee with the expected fee structure.
+TXN00394,EXCEPTION,CHARGEBACK,HIGH,A chargeback was recorded for transaction TXN00394.,"Chargeback amount: ₹4,499.25.",4499.25,Review the chargeback and associated dispute record.
+TXN00395,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00396,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00397,EXCEPTION,CHARGEBACK,HIGH,A chargeback was recorded for transaction TXN00397.,Chargeback amount: ₹374.25.,374.25,Review the chargeback and associated dispute record.
+TXN00398,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00399,EXCEPTION,FAILED_PAYMENT,HIGH,The payment associated with transaction TXN00399 is marked as FAILED.,Payment total: ₹999.00; payment status: FAILED.,999.0,Verify the payment status and determine whether a retry or customer follow-up is required.
+TXN00400,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00401,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00402,EXCEPTION,INCORRECT_FEE,MEDIUM,The settlement fee differs from the expected fee structure.,"Gross amount: ₹2,999.00; fee charged: ₹299.90.",299.9,Compare the charged settlement fee with the expected fee structure.
+TXN00403,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00404,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00405,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00406,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00407,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00408,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00409,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00410,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00411,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00412,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00413,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00414,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00415,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00415.,Settlement records found: 0; payment total: ₹999.00.,999.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00416,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00417,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00418,EXCEPTION,PARTIAL_SETTLEMENT,MEDIUM,The settlement amount is lower than the expected gross settlement amount.,"Gross settlement: ₹2,499.00; actual net settlement: ₹1,749.30; difference: ₹749.70.",749.7,Verify whether the remaining amount is pending or was incorrectly settled.
+TXN00419,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,"Expected settlement: ₹1,956.54; actual settlement: ₹1,456.54; difference: ₹500.00.",500.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00420,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00421,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00422,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00423,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00424,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00425,EXCEPTION,DUPLICATE_SETTLEMENT,MEDIUM,"Multiple settlement records were found for transaction TXN00425, including a duplicate settlement.","Settlement records: 2; total settlement amount: ₹2,955.54.",-42.46,Verify the duplicate settlement entries and investigate possible over-settlement.
+TXN00426,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00427,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00427.,Payment records found: 0; order/payment amount available for reconciliation.,1999.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00428,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00429,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00429.,"Settlement records found: 0; payment total: ₹1,999.00.",1999.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00430,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00431,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00432,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00433,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00434,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00435,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00436,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00437,EXCEPTION,PARTIAL_SETTLEMENT,MEDIUM,The settlement amount is lower than the expected gross settlement amount.,"Gross settlement: ₹7,999.00; actual net settlement: ₹5,599.30; difference: ₹2,399.70.",2399.7,Verify whether the remaining amount is pending or was incorrectly settled.
+TXN00438,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00439,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00440,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00441,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00442,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00443,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00444,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00445,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00446,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00447,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00448,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00449,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00450,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00451,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,Expected settlement: ₹975.42; actual settlement: ₹475.42; difference: ₹500.00.,500.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00452,EXCEPTION,UNKNOWN_ADJUSTMENT,MEDIUM,An unexpected settlement adjustment was recorded for transaction TXN00452.,Adjustment amount: ₹-250.00.,-250.0,Review the adjustment entry and identify its source.
+TXN00453,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00454,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00455,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00456,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00457,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00458,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00459,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00460,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00461,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00462,EXCEPTION,SETTLEMENT_DELAY,LOW,The settlement date differs from the clean reference settlement date.,Actual settlement date: 2026-05-23; reference settlement date: 2026-05-09.,0.0,Check settlement processing status and investigate the settlement delay.
+TXN00463,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00464,EXCEPTION,CHARGEBACK,HIGH,A chargeback was recorded for transaction TXN00464.,"Chargeback amount: ₹4,999.00.",4999.0,Review the chargeback and associated dispute record.
+TXN00465,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00466,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00467,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00467.,Payment records found: 0; order/payment amount available for reconciliation.,5999.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00468,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,"Expected settlement: ₹7,885.73; actual settlement: ₹7,785.73; difference: ₹100.00.",100.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00469,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00470,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00471,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00472,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00473,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00474,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00475,EXCEPTION,DATE_MISMATCH,LOW,The payment date differs from the clean reference payment date.,Actual payment date: 2026-03-30; reference payment date: 2026-03-20.,0.0,Verify the payment processing date against the source payment record.
+TXN00476,EXCEPTION,DATE_MISMATCH,LOW,The payment date differs from the clean reference payment date.,Actual payment date: 2026-07-08; reference payment date: 2026-06-28.,0.0,Verify the payment processing date against the source payment record.
+TXN00477,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,Expected settlement: ₹787.68; actual settlement: ₹287.68; difference: ₹500.00.,500.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00478,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00479,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00480,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00481,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00482,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00483,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00484,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,Expected settlement: ₹295.47; actual settlement: ₹195.47; difference: ₹100.00.,100.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00485,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00486,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00487,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00488,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00489,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00490,EXCEPTION,UNKNOWN_ADJUSTMENT,MEDIUM,An unexpected settlement adjustment was recorded for transaction TXN00490.,Adjustment amount: ₹-100.00.,-100.0,Review the adjustment entry and identify its source.
+TXN00491,EXCEPTION,SETTLEMENT_DELAY,LOW,The settlement date differs from the clean reference settlement date.,Actual settlement date: 2026-04-17; reference settlement date: 2026-04-07.,0.0,Check settlement processing status and investigate the settlement delay.
+TXN00492,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00493,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00494,EXCEPTION,DUPLICATE_PAYMENT,MEDIUM,"Multiple payment records were found for transaction TXN00494, including a duplicate payment.","Payment records: 2; total payment amount: ₹19,998.00.",9999.0,Verify the duplicate payment records and determine whether a reversal or refund is required.
+TXN00495,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00496,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00497,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00497.,Payment records found: 0; order/payment amount available for reconciliation.,799.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00498,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00499,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00500,EXCEPTION,DATE_MISMATCH,LOW,The payment date differs from the clean reference payment date.,Actual payment date: 2026-07-04; reference payment date: 2026-06-24.,0.0,Verify the payment processing date against the source payment record.
+TXN00501,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00502,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,Expected settlement: ₹488.40; actual settlement: ₹0.00; difference: ₹488.40.,488.4,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00503,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00504,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00505,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00506,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00507,EXCEPTION,DUPLICATE_PAYMENT,MEDIUM,"Multiple payment records were found for transaction TXN00507, including a duplicate payment.","Payment records: 2; total payment amount: ₹11,998.00.",5999.0,Verify the duplicate payment records and determine whether a reversal or refund is required.
+TXN00508,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,"Expected settlement: ₹1,956.54; actual settlement: ₹1,206.54; difference: ₹750.00.",750.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00509,EXCEPTION,DUPLICATE_PAYMENT,MEDIUM,"Multiple payment records were found for transaction TXN00509, including a duplicate payment.","Payment records: 2; total payment amount: ₹19,998.00.",9999.0,Verify the duplicate payment records and determine whether a reversal or refund is required.
+TXN00510,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00511,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00512,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00513,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00514,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00515,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00516,EXCEPTION,REFUND,HIGH,A refund was recorded for transaction TXN00516.,Refund amount: ₹299.70.,299.7,Verify the refund authorization and confirm that the refund amount is correct.
+TXN00517,EXCEPTION,PARTIAL_SETTLEMENT,MEDIUM,The settlement amount is lower than the expected gross settlement amount.,"Gross settlement: ₹5,999.00; actual net settlement: ₹4,199.30; difference: ₹1,799.70.",1799.7,Verify whether the remaining amount is pending or was incorrectly settled.
+TXN00518,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00519,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00520,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00521,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00522,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00523,EXCEPTION,SETTLEMENT_DELAY,LOW,The settlement date differs from the clean reference settlement date.,Actual settlement date: 2026-03-29; reference settlement date: 2026-03-24.,0.0,Check settlement processing status and investigate the settlement delay.
+TXN00524,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,Expected settlement: ₹194.78; actual settlement: ₹0.00; difference: ₹194.78.,194.78,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00525,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00526,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00527,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00528,EXCEPTION,FAILED_PAYMENT,HIGH,The payment associated with transaction TXN00528 is marked as FAILED.,"Payment total: ₹5,999.00; payment status: FAILED.",5999.0,Verify the payment status and determine whether a retry or customer follow-up is required.
+TXN00529,EXCEPTION,DUPLICATE_SETTLEMENT,MEDIUM,"Multiple settlement records were found for transaction TXN00529, including a duplicate settlement.",Settlement records: 2; total settlement amount: ₹986.22.,-11.78,Verify the duplicate settlement entries and investigate possible over-settlement.
+TXN00530,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00531,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00532,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00533,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00534,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00535,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00536,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00537,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00538,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00539,EXCEPTION,DUPLICATE_SETTLEMENT,MEDIUM,"Multiple settlement records were found for transaction TXN00539, including a duplicate settlement.","Settlement records: 2; total settlement amount: ₹5,891.84.",-106.16,Verify the duplicate settlement entries and investigate possible over-settlement.
+TXN00540,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00541,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00542,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00543,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00544,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00545,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00546,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00547,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00548,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00549,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00550,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00551,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00552,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00553,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00554,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00555,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,Expected settlement: ₹981.32; actual settlement: ₹0.00; difference: ₹981.32.,981.32,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00556,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00557,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00558,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00559,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00560,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00561,EXCEPTION,PARTIAL_SETTLEMENT,MEDIUM,The settlement amount is lower than the expected gross settlement amount.,"Gross settlement: ₹2,499.00; actual net settlement: ₹1,249.50; difference: ₹1,249.50.",1249.5,Verify whether the remaining amount is pending or was incorrectly settled.
+TXN00562,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00563,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00564,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00565,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00566,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00567,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00568,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00569,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00570,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00571,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00572,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00573,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00574,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00575,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00576,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00577,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00578,EXCEPTION,INCORRECT_FEE,MEDIUM,The settlement fee differs from the expected fee structure.,Gross amount: ₹799.00; fee charged: ₹79.90.,79.9,Compare the charged settlement fee with the expected fee structure.
+TXN00579,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00580,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00581,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00582,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00582.,"Settlement records found: 0; payment total: ₹7,999.00.",7999.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00583,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00584,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00585,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00586,EXCEPTION,PARTIAL_SETTLEMENT,MEDIUM,The settlement amount is lower than the expected gross settlement amount.,"Gross settlement: ₹4,999.00; actual net settlement: ₹2,999.40; difference: ₹1,999.60.",1999.6,Verify whether the remaining amount is pending or was incorrectly settled.
+TXN00587,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00587.,"Settlement records found: 0; payment total: ₹3,999.00.",3999.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00588,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00589,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00590,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00590.,"Settlement records found: 0; payment total: ₹2,499.00.",2499.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00591,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00592,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00593,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00594,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00595,EXCEPTION,REFUND,HIGH,A refund was recorded for transaction TXN00595.,Refund amount: ₹89.70.,89.7,Verify the refund authorization and confirm that the refund amount is correct.
+TXN00596,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00597,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00597.,Payment records found: 0; order/payment amount available for reconciliation.,2999.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00598,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00599,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00600,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00601,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00602,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00603,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00604,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00605,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00606,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00607,EXCEPTION,FAILED_PAYMENT,HIGH,The payment associated with transaction TXN00607 is marked as FAILED.,"Payment total: ₹9,999.00; payment status: FAILED.",9999.0,Verify the payment status and determine whether a retry or customer follow-up is required.
+TXN00608,EXCEPTION,FAILED_PAYMENT,HIGH,The payment associated with transaction TXN00608 is marked as FAILED.,Payment total: ₹299.00; payment status: FAILED.,299.0,Verify the payment status and determine whether a retry or customer follow-up is required.
+TXN00609,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00610,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00611,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00612,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00613,EXCEPTION,INCORRECT_FEE,MEDIUM,The settlement fee differs from the expected fee structure.,"Gross amount: ₹1,499.00; fee charged: ₹104.93.",104.93,Compare the charged settlement fee with the expected fee structure.
+TXN00614,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00615,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,"Expected settlement: ₹2,935.30; actual settlement: ₹1,935.30; difference: ₹1,000.00.",1000.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00616,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,"Expected settlement: ₹5,892.82; actual settlement: ₹4,892.82; difference: ₹1,000.00.",1000.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00617,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00618,EXCEPTION,MULTIPLE_PAYMENTS,MEDIUM,Multiple payment records exist for transaction TXN00618.,"Payment records: 2; total payment amount: ₹1,298.70.",299.7,Verify why multiple payments exist for the same transaction and confirm the correct payment record.
+TXN00619,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00620,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00621,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00622,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00623,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,"Expected settlement: ₹7,885.73; actual settlement: ₹7,635.73; difference: ₹250.00.",250.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00624,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00625,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00626,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00627,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00628,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00629,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00630,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00631,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00631.,Payment records found: 0; order/payment amount available for reconciliation.,999.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00632,EXCEPTION,SETTLEMENT_DELAY,LOW,The settlement date differs from the clean reference settlement date.,Actual settlement date: 2026-02-18; reference settlement date: 2026-02-08.,0.0,Check settlement processing status and investigate the settlement delay.
+TXN00633,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00634,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00635,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00636,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00637,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00638,EXCEPTION,WRONG_TRANSACTION_REFERENCE,MEDIUM,The bank reference does not match transaction TXN00638.,Bank reference: TXN00449.,0.0,Verify the bank reference and correct the transaction mapping if required.
+TXN00639,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00639.,"Settlement records found: 0; payment total: ₹1,499.00.",1499.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00640,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00641,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00642,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00643,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00644,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00645,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00646,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00647,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00648,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00649,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00650,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00651,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00652,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00653,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00654,EXCEPTION,UNKNOWN_ADJUSTMENT,MEDIUM,An unexpected settlement adjustment was recorded for transaction TXN00654.,Adjustment amount: ₹250.00.,250.0,Review the adjustment entry and identify its source.
+TXN00655,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00656,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00657,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00658,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00659,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00660,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00661,EXCEPTION,PARTIAL_SETTLEMENT,MEDIUM,The settlement amount is lower than the expected gross settlement amount.,"Gross settlement: ₹2,999.00; actual net settlement: ₹1,499.50; difference: ₹1,499.50.",1499.5,Verify whether the remaining amount is pending or was incorrectly settled.
+TXN00662,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00663,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00664,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00665,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00666,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00667,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00667.,Settlement records found: 0; payment total: ₹199.00.,199.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00668,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00669,EXCEPTION,FAILED_PAYMENT,HIGH,The payment associated with transaction TXN00669 is marked as FAILED.,"Payment total: ₹5,999.00; payment status: FAILED.",5999.0,Verify the payment status and determine whether a retry or customer follow-up is required.
+TXN00670,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00671,EXCEPTION,WRONG_TRANSACTION_REFERENCE,MEDIUM,The bank reference does not match transaction TXN00671.,Bank reference: TXN00951.,0.0,Verify the bank reference and correct the transaction mapping if required.
+TXN00672,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00673,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00674,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00675,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00676,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00677,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00678,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00679,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00680,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00681,EXCEPTION,CHARGEBACK,HIGH,A chargeback was recorded for transaction TXN00681.,"Chargeback amount: ₹1,499.00.",1499.0,Review the chargeback and associated dispute record.
+TXN00682,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00683,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,Expected settlement: ₹196.18; actual settlement: ₹0.00; difference: ₹196.18.,196.18,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00684,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00685,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00686,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00687,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00688,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00689,EXCEPTION,INCORRECT_FEE,MEDIUM,The settlement fee differs from the expected fee structure.,"Gross amount: ₹9,999.00; fee charged: ₹499.95.",499.95,Compare the charged settlement fee with the expected fee structure.
+TXN00690,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00691,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00692,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00693,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00694,EXCEPTION,SETTLEMENT_DELAY,LOW,The settlement date differs from the clean reference settlement date.,Actual settlement date: 2026-03-16; reference settlement date: 2026-03-02.,0.0,Check settlement processing status and investigate the settlement delay.
+TXN00695,EXCEPTION,DUPLICATE_SETTLEMENT,MEDIUM,"Multiple settlement records were found for transaction TXN00695, including a duplicate settlement.","Settlement records: 2; total settlement amount: ₹15,714.84.",-283.16,Verify the duplicate settlement entries and investigate possible over-settlement.
+TXN00696,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00697,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00698,EXCEPTION,MULTIPLE_PAYMENTS,MEDIUM,Multiple payment records exist for transaction TXN00698.,"Payment records: 2; total payment amount: ₹12,998.70.",2999.7,Verify why multiple payments exist for the same transaction and confirm the correct payment record.
+TXN00699,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00700,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00701,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00702,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00703,EXCEPTION,REFUND,HIGH,A refund was recorded for transaction TXN00703.,Refund amount: ₹249.90.,249.9,Verify the refund authorization and confirm that the refund amount is correct.
+TXN00704,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00705,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00706,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00707,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00708,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00709,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00710,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00711,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00712,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00713,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00714,EXCEPTION,DUPLICATE_PAYMENT,MEDIUM,"Multiple payment records were found for transaction TXN00714, including a duplicate payment.","Payment records: 2; total payment amount: ₹1,598.00.",799.0,Verify the duplicate payment records and determine whether a reversal or refund is required.
+TXN00715,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00716,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00717,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00718,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00719,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00720,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00721,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00721.,Payment records found: 0; order/payment amount available for reconciliation.,199.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00722,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00723,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00724,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00725,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00726,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00727,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00728,EXCEPTION,CHARGEBACK,HIGH,A chargeback was recorded for transaction TXN00728.,Chargeback amount: ₹149.25.,149.25,Review the chargeback and associated dispute record.
+TXN00729,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00730,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00731,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00732,EXCEPTION,FAILED_PAYMENT,HIGH,The payment associated with transaction TXN00732 is marked as FAILED.,Payment total: ₹799.00; payment status: FAILED.,799.0,Verify the payment status and determine whether a retry or customer follow-up is required.
+TXN00733,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,"Expected settlement: ₹5,871.58; actual settlement: ₹5,621.58; difference: ₹250.00.",250.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00734,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00735,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00736,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00737,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00738,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00739,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00740,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00741,EXCEPTION,SETTLEMENT_DELAY,LOW,The settlement date differs from the clean reference settlement date.,Actual settlement date: 2026-02-01; reference settlement date: 2026-01-27.,0.0,Check settlement processing status and investigate the settlement delay.
+TXN00742,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00742.,Payment records found: 0; order/payment amount available for reconciliation.,5999.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00743,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00744,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00745,EXCEPTION,SETTLEMENT_DELAY,LOW,The settlement date differs from the clean reference settlement date.,Actual settlement date: 2026-03-02; reference settlement date: 2026-02-16.,0.0,Check settlement processing status and investigate the settlement delay.
+TXN00746,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00747,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00748,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00749,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00750,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00751,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,Expected settlement: ₹975.42; actual settlement: ₹475.42; difference: ₹500.00.,500.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00752,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00753,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00754,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00755,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00756,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00757,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00758,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00759,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00760,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00761,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,"Expected settlement: ₹5,857.42; actual settlement: ₹5,757.42; difference: ₹100.00.",100.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00762,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00763,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00764,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00764.,Settlement records found: 0; payment total: ₹199.00.,199.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00765,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00766,EXCEPTION,DUPLICATE_SETTLEMENT,MEDIUM,"Multiple settlement records were found for transaction TXN00766, including a duplicate settlement.","Settlement records: 2; total settlement amount: ₹1,569.72.",-28.28,Verify the duplicate settlement entries and investigate possible over-settlement.
+TXN00767,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00768,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00769,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00770,EXCEPTION,WRONG_TRANSACTION_REFERENCE,MEDIUM,The bank reference does not match transaction TXN00770.,Bank reference: TXN00135.,0.0,Verify the bank reference and correct the transaction mapping if required.
+TXN00771,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,Expected settlement: ₹984.85; actual settlement: ₹234.85; difference: ₹750.00.,750.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00772,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00773,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00773.,Payment records found: 0; order/payment amount available for reconciliation.,1999.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00774,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00775,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00776,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00777,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,"Expected settlement: ₹7,857.42; actual settlement: ₹7,107.42; difference: ₹750.00.",750.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00778,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00779,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00780,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00781,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00782,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00783,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00784,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00785,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00786,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00787,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00788,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00789,EXCEPTION,REFUND,HIGH,A refund was recorded for transaction TXN00789.,Refund amount: ₹599.90.,599.9,Verify the refund authorization and confirm that the refund amount is correct.
+TXN00790,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00790.,Payment records found: 0; order/payment amount available for reconciliation.,1499.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00791,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,Expected settlement: ₹981.32; actual settlement: ₹731.32; difference: ₹250.00.,250.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00792,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00793,EXCEPTION,DUPLICATE_PAYMENT,MEDIUM,"Multiple payment records were found for transaction TXN00793, including a duplicate payment.","Payment records: 2; total payment amount: ₹7,998.00.",3999.0,Verify the duplicate payment records and determine whether a reversal or refund is required.
+TXN00794,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00795,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00796,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00797,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00798,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00798.,Payment records found: 0; order/payment amount available for reconciliation.,799.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00799,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00800,EXCEPTION,REFUND,HIGH,A refund was recorded for transaction TXN00800.,Refund amount: ₹749.75.,749.75,Verify the refund authorization and confirm that the refund amount is correct.
+TXN00801,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00802,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00803,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00804,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00805,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00806,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00807,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00808,EXCEPTION,PARTIAL_SETTLEMENT,MEDIUM,The settlement amount is lower than the expected gross settlement amount.,"Gross settlement: ₹3,999.00; actual net settlement: ₹1,999.50; difference: ₹1,999.50.",1999.5,Verify whether the remaining amount is pending or was incorrectly settled.
+TXN00809,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00810,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,"Expected settlement: ₹2,469.51; actual settlement: ₹2,219.51; difference: ₹250.00.",250.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00811,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00812,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00813,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00814,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00815,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00816,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00817,EXCEPTION,INCORRECT_FEE,MEDIUM,The settlement fee differs from the expected fee structure.,"Gross amount: ₹4,999.00; fee charged: ₹349.93.",349.93,Compare the charged settlement fee with the expected fee structure.
+TXN00818,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00819,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00820,EXCEPTION,PARTIAL_SETTLEMENT,MEDIUM,The settlement amount is lower than the expected gross settlement amount.,"Gross settlement: ₹1,499.00; actual net settlement: ₹1,199.20; difference: ₹299.80.",299.8,Verify whether the remaining amount is pending or was incorrectly settled.
+TXN00821,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00822,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00823,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00824,EXCEPTION,REFUND,HIGH,A refund was recorded for transaction TXN00824.,Refund amount: ₹374.75.,374.75,Verify the refund authorization and confirm that the refund amount is correct.
+TXN00825,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00826,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00827,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00828,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00829,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00830,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00831,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00832,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00833,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00834,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00835,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00836,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00837,EXCEPTION,REFUND,HIGH,A refund was recorded for transaction TXN00837.,"Refund amount: ₹1,499.75.",1499.75,Verify the refund authorization and confirm that the refund amount is correct.
+TXN00838,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00839,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00840,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00841,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00842,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00843,EXCEPTION,DUPLICATE_PAYMENT,MEDIUM,"Multiple payment records were found for transaction TXN00843, including a duplicate payment.","Payment records: 2; total payment amount: ₹4,998.00.",2499.0,Verify the duplicate payment records and determine whether a reversal or refund is required.
+TXN00844,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00845,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00846,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00847,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00848,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00849,EXCEPTION,FAILED_PAYMENT,HIGH,The payment associated with transaction TXN00849 is marked as FAILED.,"Payment total: ₹2,499.00; payment status: FAILED.",2499.0,Verify the payment status and determine whether a retry or customer follow-up is required.
+TXN00850,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00851,EXCEPTION,DATE_MISMATCH,LOW,The payment date differs from the clean reference payment date.,Actual payment date: 2026-03-29; reference payment date: 2026-03-19.,0.0,Verify the payment processing date against the source payment record.
+TXN00852,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00853,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00854,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00855,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00856,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00857,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00858,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00859,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00860,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00861,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00862,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00863,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00864,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00865,EXCEPTION,REFUND,HIGH,A refund was recorded for transaction TXN00865.,"Refund amount: ₹1,199.70.",1199.7,Verify the refund authorization and confirm that the refund amount is correct.
+TXN00866,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00867,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00868,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00869,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00870,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00871,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00872,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00873,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00874,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00875,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00876,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00877,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00878,EXCEPTION,REFUND,HIGH,A refund was recorded for transaction TXN00878.,Refund amount: ₹39.80.,39.8,Verify the refund authorization and confirm that the refund amount is correct.
+TXN00879,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00880,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00880.,"Settlement records found: 0; payment total: ₹1,499.00.",1499.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00881,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00882,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00883,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00884,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00885,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00886,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00887,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00888,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00889,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00890,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00891,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00892,EXCEPTION,DUPLICATE_PAYMENT,MEDIUM,"Multiple payment records were found for transaction TXN00892, including a duplicate payment.","Payment records: 2; total payment amount: ₹11,998.00.",5999.0,Verify the duplicate payment records and determine whether a reversal or refund is required.
+TXN00893,EXCEPTION,DATE_MISMATCH,LOW,The payment date differs from the clean reference payment date.,Actual payment date: 2026-05-18; reference payment date: 2026-05-08.,0.0,Verify the payment processing date against the source payment record.
+TXN00894,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00895,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00896,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,Expected settlement: ₹196.18; actual settlement: ₹0.00; difference: ₹196.18.,196.18,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00897,EXCEPTION,DUPLICATE_PAYMENT,MEDIUM,"Multiple payment records were found for transaction TXN00897, including a duplicate payment.","Payment records: 2; total payment amount: ₹7,998.00.",3999.0,Verify the duplicate payment records and determine whether a reversal or refund is required.
+TXN00898,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00899,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00900,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00901,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00902,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00903,EXCEPTION,CHARGEBACK,HIGH,A chargeback was recorded for transaction TXN00903.,"Chargeback amount: ₹2,999.25.",2999.25,Review the chargeback and associated dispute record.
+TXN00904,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00905,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00906,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00907,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00908,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00909,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00910,EXCEPTION,DUPLICATE_SETTLEMENT,MEDIUM,"Multiple settlement records were found for transaction TXN00910, including a duplicate settlement.","Settlement records: 2; total settlement amount: ₹1,950.84.",-47.16,Verify the duplicate settlement entries and investigate possible over-settlement.
+TXN00911,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00912,EXCEPTION,DUPLICATE_PAYMENT,MEDIUM,"Multiple payment records were found for transaction TXN00912, including a duplicate payment.",Payment records: 2; total payment amount: ₹398.00.,199.0,Verify the duplicate payment records and determine whether a reversal or refund is required.
+TXN00913,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00914,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00915,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00916,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00917,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00918,EXCEPTION,UNKNOWN_ADJUSTMENT,MEDIUM,An unexpected settlement adjustment was recorded for transaction TXN00918.,Adjustment amount: ₹100.00.,100.0,Review the adjustment entry and identify its source.
+TXN00919,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00920,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00921,EXCEPTION,CHARGEBACK,HIGH,A chargeback was recorded for transaction TXN00921.,"Chargeback amount: ₹2,999.00.",2999.0,Review the chargeback and associated dispute record.
+TXN00922,EXCEPTION,SETTLEMENT_DELAY,LOW,The settlement date differs from the clean reference settlement date.,Actual settlement date: 2026-06-05; reference settlement date: 2026-05-31.,0.0,Check settlement processing status and investigate the settlement delay.
+TXN00923,EXCEPTION,AMOUNT_MISMATCH,HIGH,The settlement amount does not match the clean reference amount.,"Expected settlement: ₹5,857.42; actual settlement: ₹5,107.42; difference: ₹750.00.",750.0,Compare the expected and actual settlement amounts and investigate the difference.
+TXN00924,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00925,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00925.,Payment records found: 0; order/payment amount available for reconciliation.,2999.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00926,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00927,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00928,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00929,EXCEPTION,FAILED_PAYMENT,HIGH,The payment associated with transaction TXN00929 is marked as FAILED.,"Payment total: ₹1,499.00; payment status: FAILED.",1499.0,Verify the payment status and determine whether a retry or customer follow-up is required.
+TXN00930,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00931,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00932,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00933,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00934,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00935,EXCEPTION,FAILED_PAYMENT,HIGH,The payment associated with transaction TXN00935 is marked as FAILED.,"Payment total: ₹2,999.00; payment status: FAILED.",2999.0,Verify the payment status and determine whether a retry or customer follow-up is required.
+TXN00936,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00937,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00938,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00939,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00940,EXCEPTION,FAILED_PAYMENT,HIGH,The payment associated with transaction TXN00940 is marked as FAILED.,"Payment total: ₹5,999.00; payment status: FAILED.",5999.0,Verify the payment status and determine whether a retry or customer follow-up is required.
+TXN00941,EXCEPTION,MISSING_PAYMENT,HIGH,No payment record was found for transaction TXN00941.,Payment records found: 0; order/payment amount available for reconciliation.,2499.0,Verify payment gateway records and confirm whether the payment was received.
+TXN00942,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00943,EXCEPTION,CHARGEBACK,HIGH,A chargeback was recorded for transaction TXN00943.,"Chargeback amount: ₹1,999.50.",1999.5,Review the chargeback and associated dispute record.
+TXN00944,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00945,EXCEPTION,FAILED_PAYMENT,HIGH,The payment associated with transaction TXN00945 is marked as FAILED.,"Payment total: ₹1,999.00; payment status: FAILED.",1999.0,Verify the payment status and determine whether a retry or customer follow-up is required.
+TXN00946,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00947,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00948,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00949,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00950,EXCEPTION,REFUND,HIGH,A refund was recorded for transaction TXN00950.,Refund amount: ₹599.80.,599.8,Verify the refund authorization and confirm that the refund amount is correct.
+TXN00951,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00952,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00953,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00954,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00955,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00956,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00957,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00958,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00959,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00960,EXCEPTION,FAILED_PAYMENT,HIGH,The payment associated with transaction TXN00960 is marked as FAILED.,"Payment total: ₹1,499.00; payment status: FAILED.",1499.0,Verify the payment status and determine whether a retry or customer follow-up is required.
+TXN00961,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00962,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00963,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00964,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00965,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00966,EXCEPTION,MISSING_SETTLEMENT,HIGH,No settlement record was found for transaction TXN00966.,"Settlement records found: 0; payment total: ₹5,999.00.",5999.0,Verify the settlement batch and check whether the transaction is still pending.
+TXN00967,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00968,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00969,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00970,EXCEPTION,INCORRECT_FEE,MEDIUM,The settlement fee differs from the expected fee structure.,"Gross amount: ₹9,999.00; fee charged: ₹499.95.",499.95,Compare the charged settlement fee with the expected fee structure.
+TXN00971,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00972,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00973,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00974,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00975,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00976,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00977,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00978,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00979,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00980,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00981,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00982,EXCEPTION,DATE_MISMATCH,LOW,The payment date differs from the clean reference payment date.,Actual payment date: 2026-07-10; reference payment date: 2026-06-30.,0.0,Verify the payment processing date against the source payment record.
+TXN00983,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00984,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00985,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00986,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00987,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00988,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00989,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00990,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00991,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00992,EXCEPTION,WRONG_TRANSACTION_REFERENCE,MEDIUM,The bank reference does not match transaction TXN00992.,Bank reference: TXN00902.,0.0,Verify the bank reference and correct the transaction mapping if required.
+TXN00993,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00994,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00995,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00996,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00997,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00998,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN00999,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
+TXN01000,MATCHED,MATCHED,NONE,"Payment, bank and settlement records passed all reconciliation checks.",No reconciliation exception was detected.,0.0,No action required.
