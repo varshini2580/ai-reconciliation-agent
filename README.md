@@ -6,7 +6,6 @@
 [![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red.svg)](https://streamlit.io/)
 [![Machine Learning](https://img.shields.io/badge/ML-Random%20Forest-orange.svg)](#-machine-learning-layer)
 [![Generative AI](https://img.shields.io/badge/Generative%20AI-Gemini-purple.svg)](#-generative-ai-layer)
-[![Status](https://img.shields.io/badge/Status-Hackathon%20Prototype-green.svg)](#-limitations)
 
 ---
 
